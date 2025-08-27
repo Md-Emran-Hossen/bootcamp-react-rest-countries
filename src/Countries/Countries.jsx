@@ -26,7 +26,7 @@ const Countries = () => {
   };
 
   useEffect(() => {
-      fetch("/src/resources/countriesv3_1.json")
+      fetch('https://countriesv3-1-filtered.tiiny.site/countriesv3_1_filtered.json')
    // fetch("https://restcountries.com/v3.1/all")
       .then((res) => res.json())
    .then((data) => setCountries(data))
