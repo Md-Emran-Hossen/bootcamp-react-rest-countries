@@ -2,7 +2,7 @@ import { useState } from "react";
 import "./Country.css";
 //import CountryDetail from "../CountryDetail/CountryDetail";
 const Country = ({ country, handleVisitedCountries }) => {
-  const { name, nativeName, flags, population, subregion } = country;
+  const { name, flags, population, subregion } = country;
  console.log("Country PAGE",country)
   const [visited, setVisited] = useState(false);
 
@@ -13,7 +13,7 @@ const Country = ({ country, handleVisitedCountries }) => {
   return (
     <div className={`country ${visited && "visited"}`}>
       <h3>Country Name: {name.common}</h3>
-       <h3>Native Name: {nativeName}</h3>
+       <h3>Native Name: {name.official}</h3>
       <img style={{ height: 160, width: 320 }} src={flags.png} alt="" />
       <p>Country Population: {population}</p>
       <p>Region: {subregion}</p>

@@ -29,7 +29,6 @@ const Countries = () => {
       fetch("/src/resources/countriesv3_1.json")
    // fetch("https://restcountries.com/v3.1/all")
       .then((res) => res.json())
-    //   .then((data)=> console.log("Country API FOUND",data))
    .then((data) => setCountries(data))
   ;
   }, []);
@@ -52,7 +51,7 @@ const Countries = () => {
       <div className="country-container">
         {countries.map((country) => (
           <Country
-            key={country.alpha2Code}
+            key={country.cca3}
             handleVisitedCountries={handleVisitedCountries}
             country={country}
           ></Country>
